@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2025 at 05:47 AM
+-- Generation Time: Mar 21, 2025 at 05:54 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -233,7 +233,8 @@ CREATE TABLE `mhs` (
 --
 
 INSERT INTO `mhs` (`id`, `nim`, `nama`, `email`, `foto`) VALUES
-(46, 'A12.2023.07126', 'Rizaldi Ilman Maulana', 'maul@mail.com', 'images (1).png');
+(46, 'A12.2023.07126', 'Rizaldi Ilman Maulana', 'maul@mail.com', 'images (1).png'),
+(47, '', '', '', 'cat2.jpeg');
 
 -- --------------------------------------------------------
 
@@ -245,20 +246,18 @@ CREATE TABLE `user` (
   `iduser` int(11) NOT NULL,
   `username` varchar(50) DEFAULT NULL,
   `password` varchar(32) DEFAULT NULL,
-  `status` varchar(5) DEFAULT NULL
+  `status` varchar(5) DEFAULT NULL,
+  `filefotouser` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`iduser`, `username`, `password`, `status`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin'),
-(2, 'mhs', '0357a7592c4734a8b1e12bc48e29e9e9', 'mhs'),
-(3, 'dsn', 'da532bf806defa26fdbeee5dd2e0d68f', 'dsn'),
-(4, 'tu', 'b6b4ce6df035dcfaa26f3bc32fb89e6a', 'tu'),
-(5, 'llg', 'b8ae57911c26ed8313cd09a33f7f43f5', 'admin'),
-(7, 'A12.2016.02898', 'f8057ac11cd7a20c6bf238c4bf239c1c', 'mhs');
+INSERT INTO `user` (`iduser`, `username`, `password`, `status`, `filefotouser`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'cat2.jpeg'),
+(2, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'admin', 'cat1.jpeg'),
+(3, 'aku', '89ccfac87d8d06db06bf3211cb2d69ed', 'admin', 'cat3.jpeg');
 
 --
 -- Indexes for dumped tables
@@ -332,13 +331,13 @@ ALTER TABLE `kultawar`
 -- AUTO_INCREMENT for table `mhs`
 --
 ALTER TABLE `mhs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
