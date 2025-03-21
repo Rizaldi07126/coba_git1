@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Sistem Informasi Akademik::Tambah Data Mahasiswa</title>
+	<title>Sistem Informasi Akademik | Tambah Data Mahasiswa</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap lokal -->

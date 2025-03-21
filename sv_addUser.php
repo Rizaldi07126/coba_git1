@@ -2,15 +2,15 @@
     include "fungsi.php"; // masukan konekasi DB
 
     // ambil variable
-    $nim=$_POST['nim'];
-    $nama=$_POST['nama'];
-    $email=$_POST["email"];
+    $username=$_POST['username'];
+    $password=md5($_POST['password']);
+    $status=$_POST["status"];
 
     // default sukses unggah foto 
     $uploadOk=1;
     // Siapkan terlebih dahulu komponen untuk penyimpan foto
     // text "foto/" disimpan dalam variabel $folderupload
-    $folderupload ="foto/";
+    $folderupload ="foto/user/";
     
     //basename : mengambil bagian akhir dari direktori tersebut
      $fileupload = $folderupload.basename($_FILES['foto']['name']); // menyeting hasilnya ==>foto/A12.2018.05555.jpg
@@ -54,11 +54,11 @@
         // $lokasi_file telah diupload ke $direktori
         if (move_uploaded_file($_FILES["foto"]["tmp_name"], $fileupload)) {       
              //membuat query
-            $sql="insert mhs values('','$nim','$nama','$email','$filefotouser')";
+            $sql="insert user values('','$username','$password','$status','$filefotouser')";
             mysqli_query($koneksi,$sql);
-            //header("location:addMhs.php");
+            header("location:ajaxUpdateUser.php");
            
-            //require "addMhs.php";
+            //require "addUser.php";
             //echo "File ". basename( $_FILES["foto"]["name"]). " berhasil diupload";
         } else {
             echo "Data gagal tersimpan";

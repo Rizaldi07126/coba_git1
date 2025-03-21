@@ -13,5 +13,5 @@ $sql="update mhs set nama='$nama',
 					 email='$email'
 					 where id='$id'";
 mysqli_query($koneksi,$sql) or die(mysqli_error($koneksi));
-header("location:updateMhs.php");
+header("location:ajaxUpdateMhs.php");
 ?>
