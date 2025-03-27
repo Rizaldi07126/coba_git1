@@ -85,7 +85,7 @@
 		<h2 class="text-center">Daftar User</h2>
 		<div class="text-center"><a href="cetakMhsmPdf.php"><span class="fas fa-print">&nbsp;Print</span></a></div>
 		<div class="float-left mb-3">
-			<a class="btn btn-success" href="addMhs.php">Tambah User</a>
+			<a class="btn btn-success" href="addUser.php">Tambah User</a>
 		</div>
 
 		<div class="float-right mb-3">

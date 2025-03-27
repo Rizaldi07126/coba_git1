@@ -64,7 +64,7 @@
 		}
 		
 		// Event listeners
-		$("#nim").on("blur", function() {
+		$("#username").on("blur", function() {
 		if (validateUsername()) {
 		checkUnameExists($(this).val());
 		}
@@ -107,10 +107,12 @@
 		});
 		});
 		});
+
+		function notifsaved() {
+		alert("Data berhasil disimpan");
+		window.location.reload();
+		}
 		</script>
-
-
-	<!--                                                                     -->
 	
 </head>
 

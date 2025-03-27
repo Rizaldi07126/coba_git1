@@ -171,7 +171,7 @@
 	<div class="utama">
 		<br><br><br>
 		<h3>TAMBAH DATA MAHASISWA</h3>
-		<form id="mahasiswaForm" method="post" enctype="multipart/form-data" onsubmit="notifsaved()">
+		<form id="mahasiswaForm" method="post" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="nim">NIM:</label>
 				<input class="form-control" type="text" name="nim" id="nim"

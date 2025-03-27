@@ -3,7 +3,7 @@
 
     // ambil variable
     $username=$_POST['username'];
-    $password=md5($_POST['password']);
+    $password=password_hash($_POST['password'], PASSWORD_DEFAULT);
     $status=$_POST["status"];
 
     // default sukses unggah foto 
@@ -54,9 +54,10 @@
         // $lokasi_file telah diupload ke $direktori
         if (move_uploaded_file($_FILES["foto"]["tmp_name"], $fileupload)) {       
              //membuat query
-            $sql="insert user values('','$username','$password','$status','$filefotouser')";
+            $sql="insert into user (username, password, status, filefotouser) values('$username','$password','$status','$filefotouser')";
             mysqli_query($koneksi,$sql);
-            header("location:ajaxUpdateUser.php");
+            header('location:ajaxUpdateUser.php');
+            exit();
            
             //require "addUser.php";
             //echo "File ". basename( $_FILES["foto"]["name"]). " berhasil diupload";

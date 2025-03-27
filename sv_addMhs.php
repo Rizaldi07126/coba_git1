@@ -1,5 +1,5 @@
 <?php
-    include "fungsi.php"; // masukan konekasi DB
+    include "fungsi.php"; // masukan koneksi DB
 
     // ambil variable
     $nim=$_POST['nim'];
@@ -10,7 +10,7 @@
     $uploadOk=1;
     // Siapkan terlebih dahulu komponen untuk penyimpan foto
     // text "foto/" disimpan dalam variabel $folderupload
-    $folderupload ="foto/";
+    $folderupload ="foto/mhs/";
     
     //basename : mengambil bagian akhir dari direktori tersebut
      $fileupload = $folderupload.basename($_FILES['foto']['name']); // menyeting hasilnya ==>foto/A12.2018.05555.jpg
@@ -54,9 +54,10 @@
         // $lokasi_file telah diupload ke $direktori
         if (move_uploaded_file($_FILES["foto"]["tmp_name"], $fileupload)) {       
              //membuat query
-            $sql="insert mhs values('','$nim','$nama','$email','$filefotouser')";
+            $sql="insert into mhs (nim, nama, email, foto) values('$nim','$nama','$email','$foto')";
             mysqli_query($koneksi,$sql);
-            //header("location:addMhs.php");
+            header('location:ajaxUpdateMhs.php');
+            exit();
            
             //require "addMhs.php";
             //echo "File ". basename( $_FILES["foto"]["name"]). " berhasil diupload";
