@@ -5,7 +5,7 @@ require "head.html";
 
 //cek logout
 if (!isset($_SESSION['username'])){
-	header("location:index1.php");
+	header("location:index.php");
 	exit();
 }
 ?>
