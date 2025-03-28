@@ -14,7 +14,7 @@
     
     //basename : mengambil bagian akhir dari direktori tersebut
      $fileupload = $folderupload.basename($_FILES['foto']['name']); // menyeting hasilnya ==>foto/A12.2018.05555.jpg
-     $filefotouser = basename($_FILES['foto']['name']);                 // menyeting hasilnya ==>A12.2018.0555.jpg
+     $foto = basename($_FILES['foto']['name']);                 // menyeting hasilnya ==>A12.2018.0555.jpg
     //strtolower()      :  mengkonversi string ke huruf kecil
     //Fungsi pathinfo() : digunakan untuk mengembalikan informasi tentang jalur file.
     //PATHINFO_EXTENSION untuk mendapatkan path file name

@@ -6,7 +6,7 @@ require "fungsi.php";
 $iduser=$_POST["iduser"];
 $username=$_POST["username"];
 $password=md5($_POST["password"]);
-$status=$_POST['status']
+$status=$_POST['status'];
 $uploadOk=1;
 
 //membuat query

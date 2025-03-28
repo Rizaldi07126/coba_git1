@@ -22,7 +22,7 @@
 		<h2 class="mb-3 text-center">EDIT DATA MAHASISWA</h2>	
 		<div class="row">
 		<div class="col-sm-3 text-center">
-			<img class="rounded img-thumbnail" src="foto/<?php echo $row['foto']?>">
+			<img class="rounded img-thumbnail" src="foto/mhs/<?php echo $row['foto']?>">
 			<div>
 				[ <a href="gantiFotoMhs.php?id=<?php echo $row['id']?>">Ganti Foto</a> ]
 			</div>	
