@@ -178,7 +178,7 @@ CREATE TABLE `mhs` (
   `email` varchar(50) DEFAULT NULL,
   `foto` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,7 +187,7 @@ CREATE TABLE `mhs` (
 
 LOCK TABLES `mhs` WRITE;
 /*!40000 ALTER TABLE `mhs` DISABLE KEYS */;
-INSERT INTO `mhs` VALUES (1,'A12.2023.07126','Rizaldi Ilman Maulana','maul@mail.com','images (1).png'),(48,'A12.2023.07127','Aldi','aldi@mail.com','');
+INSERT INTO `mhs` VALUES (50,'A12.2023.07126','Rizaldi Ilman Maulana','112202307126@mhs.dinus.ac.id','Foto-1.JPG'),(51,'A12.2023.07127','Aldi','aldi@mail.com','cat1.jpeg');
 /*!40000 ALTER TABLE `mhs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,4 +227,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-27 20:27:12
+-- Dump completed on 2025-03-28 11:41:50
