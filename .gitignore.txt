@@ -1,2 +1,3 @@
-# ignore css
-ignore .css
+# ignore sql
+*.sql
+
