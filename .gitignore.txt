@@ -7,3 +7,6 @@
 #ignore koneksi
 *koneksi.php
 
+#ignore zip
+*.zip
+

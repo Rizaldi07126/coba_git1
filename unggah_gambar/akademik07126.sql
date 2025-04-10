@@ -66,6 +66,35 @@ INSERT INTO `gambar` VALUES (1,'cat6.jpg','uploads/resized_cat6.jpg');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `gambar_thumbnail`
+--
+
+DROP TABLE IF EXISTS `gambar_thumbnail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `gambar_thumbnail` (
+  `id_thumbnail` int NOT NULL AUTO_INCREMENT,
+  `file_name` varchar(255) NOT NULL,
+  `filepath` varchar(255) NOT NULL,
+  `thumbpath` varchar(255) NOT NULL,
+  `width` int DEFAULT NULL,
+  `height` int DEFAULT NULL,
+  `uploaded_at` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_thumbnail`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gambar_thumbnail`
+--
+
+LOCK TABLES `gambar_thumbnail` WRITE;
+/*!40000 ALTER TABLE `gambar_thumbnail` DISABLE KEYS */;
+INSERT INTO `gambar_thumbnail` VALUES (1,'cat1.jpeg','uploads/cat1.jpeg','thumbs/thumb_cat1.jpeg',225,225,'current_timestamp()'),(2,'cat1.jpeg','uploads/cat1.jpeg','thumbs/thumb_cat1.jpeg',225,225,'current_timestamp()'),(3,'cat-in-shock-surprises.gif','uploads/cat-in-shock-surprises.gif','thumbs/thumb_cat-in-shock-surprises.gif',113,200,'current_timestamp()'),(4,'cat8.png','uploads/cat8.png','thumbs/thumb_cat8.png',240,240,'current_timestamp()');
+/*!40000 ALTER TABLE `gambar_thumbnail` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `jadwal`
 --
 
@@ -252,4 +281,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-09 22:45:51
+-- Dump completed on 2025-04-10 15:15:47
