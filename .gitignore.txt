@@ -1,3 +1,9 @@
 # ignore sql
 *.sql
 
+#ignore pdf
+*.pdf
+
+#ignore koneksi
+*koneksi.php
+
