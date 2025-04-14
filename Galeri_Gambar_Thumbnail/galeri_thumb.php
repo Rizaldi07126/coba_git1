@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			imagepng($thumb, $thumbpath);
 			break;
 		case 'gif':
-			imagejpeg($thumb, $thumbpath);
+			imagegif($thumb, $thumbpath);
 			break;
 	}
 
